@@ -1,0 +1,20 @@
+.btn {
+  &--main {
+    &:link,
+    &:visited {
+      font-size: 2.4rem;
+      text-decoration: none;
+      padding: 1.2rem 3.6rem;
+      background-color: var(--light-green);
+      border-radius: 4px 12px 4px 12px;
+      color: var(--gray);
+      box-shadow: var(--box-shadow);
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      background-color: var(--dark-green);
+      box-shadow: none;
+    }
+  }
+}

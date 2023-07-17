@@ -1,0 +1,30 @@
+{
+  "name": "skywood-webpage",
+  "version": "1.0.0",
+  "description": "Listing Landing Page",
+  "main": "server.js",
+  "scripts": {
+    "watch:sass": "node-sass public/sass/main.scss public/css/styles.css -w",
+    "devserver": "nodemon server.js",
+    "start": "npm-run-all --parallel devserver watch:sass ",
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.comp.css",
+    "concat:css": "concat -o public/css/style.concat.css public/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.concat.css -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "author": "Chris Campbell",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concat": "^1.0.3",
+    "express": "^4.18.2",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0"
+  },
+  "dependencies": {
+    "node-mailer": "^0.1.1"
+  }
+}

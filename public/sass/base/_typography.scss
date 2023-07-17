@@ -1,0 +1,36 @@
+.hero__header {
+  &-main {
+    font-size: 9.6rem;
+    line-height: 1;
+    color: var(--dark-green);
+  }
+
+  &-secondary {
+    font-size: 3.6rem;
+    color: var(--light-green);
+    font-style: italic;
+  }
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-family: var(--font-text);
+
+  &--main {
+    color: var(--charcoal);
+  }
+
+  &--white {
+    color: var(--gray);
+  }
+}
+
+.heading-secondary {
+  font-family: var(--font-text);
+  font-size: 3.6rem;
+
+  &--white {
+    color: var(--gray);
+  }
+}
